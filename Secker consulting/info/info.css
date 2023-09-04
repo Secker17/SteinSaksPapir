@@ -1,0 +1,221 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  height: 100vh;
+  position: relative;
+  background-image: url('/Bilder/YsWRDA.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-box, .overlay-box, .big-box, .corner-box {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-box {
+  background: linear-gradient(to bottom right, #ffffff, #e9e9e9);
+  width: 500px;
+  height: 350px;
+  text-align: center;
+  left: 10%;
+  top: 20%;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.overlay-box {
+  background: rgba(255, 255, 255, 0.8);
+  width: 200px;
+  height: 200px;
+  left: 65%;
+  top: 70%;
+}
+
+.overlay-box img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.big-box {
+  background: rgba(235, 235, 235, 0.8);
+  width: 500px;
+  height: 350px;
+  right: 10%;
+  bottom: 10%;
+  position: absolute;
+}
+
+.corner-box {
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(235, 235, 235, 0.8);
+  width: 700px;
+  height: 450px;
+  right: 9%;
+  bottom: 15%;
+  padding: 20px 40px;
+  position: absolute;
+}
+
+.corner-box h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+nav {
+  width: 100%;
+  background-size: cover;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 30px;
+  border: 2px solid #77717a;
+  border-radius: 4px;
+  font-size: 1.2em;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #77717a;
+  color: #fff;
+}
+
+.corner-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem; 
+  color: #333;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 15%;  /* Liten avstand fra toppen */
+  right: 16%;  /* Samme avstand fra høyre som corner-box */
+  z-index: 10;  /* Sørg for at teksten er over corner-box */
+    margin: 0;
+
+}
+
+.advarselsboks {
+  display: flex;
+  align-items: center;
+  background-color: #FFE066; /* Lys oransje bakgrunn */
+  border: 1px solid #FFA500; /* Oransje kant */
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  animation: breathe 2s infinite alternate;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Skygge for litt dybde */
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #FFA500; /* Oransje trekant */
+  margin-right: 10px;
+}
+
+.advarseltekst {
+  color: #D43E00; /* Mørk oransje tekst */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@keyframes breathe {
+  0% {
+      transform: scale(0.95);
+  }
+  100% {
+      transform: scale(1.05);
+  }
+}
+
+/* For tabletter og mindre desktop-skjermer */
+@media only screen and (max-width: 1024px) {
+  nav a {
+      font-size: 1em;
+      padding: 5px 15px;
+  }
+
+  .main-box, .corner-box {
+      width: 80%;
+      left: 10%;
+  }
+  
+  .corner-text {
+      font-size: 3rem; 
+      right: 7%;  
+  }
+}
+
+/* For mobile enheter */
+@media only screen and (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav li {
+      margin: 5px 0;
+  }
+
+  .main-box, .corner-box {
+      width: 100%;
+      left: 0;
+  }
+  
+  .corner-text {
+      font-size: 2rem; 
+      right: 3%; 
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .corner-box h1 {
+      font-size: 1.2rem;
+  }
+}
+

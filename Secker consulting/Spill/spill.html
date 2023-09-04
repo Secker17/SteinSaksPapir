@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stein, Saks, Papir Spill</title>
+    <link rel="stylesheet" href="spill.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../MainWeb/Index.html">Hjem</a></li>
+            <li><a href="../info/info.html">Info</a></li>
+            <li><a href="/regler/regler.html">Regler</a></li>
+        </ul>
+    </nav>
+    <div class="game-container">
+        <p id="score">0 - 0</p>
+        <h1>Stein, Saks, Papir</h1>
+        <button id="startGame">Start Spill</button>
+      <div class="resultcolor">
+        <p id="result">Klikk på 'Start Spill' for å begynne!</p>
+    </div>
+        <h2 id="timer">3</h2>
+        <div class="choices">
+            <img src="/Bilder/stones-and-rocks-png-image-stone-transparent-background-11563023332aitscoxpiw-removebg-preview.png" alt="Stein" data-choice="stein" onclick="makeChoice('stein')">
+            <img src="/Bilder/scissors-11530930320bknx7gpoba-removebg-preview.png" alt="Saks" data-choice="saks" onclick="makeChoice('saks')">
+            <img src="/Bilder/ripped-paper-image-symbol-17-removebg-preview.png" alt="Papir" data-choice="papir" onclick="makeChoice('papir')">
+        </div>
+    </div>
+    <script src="spill.js"></script>
+</body>
+</html>
