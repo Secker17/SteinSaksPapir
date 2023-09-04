@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spill Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../MainWeb/Index.html">Hjem</a></li>
+            <li><a href="../info/info.html">Info</a></li>
+            <li><a href="/regler/regler.html">Regler</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img src="/Bilder/frame_0_delay-0.01s-removebg-preview.png" alt="Your Image Description" id="featured-image">
+        <h1>Stein, Saks, Papir</h1>
+        <p>Trykk nedenfor for å gå til arenaen og kjempe i det ultimate spillet!</p>
+        <a href="/Spill/spill.html" class="play-button">Spill</a>
+    </main>
+    <section id="battleArena" class="game-section">
+        <h2>Velg din hånd:</h2>
+        <div class="choices">
+            <button onclick="playGame('Stein')">Stein</button>
+            <button onclick="playGame('Saks')">Saks</button>
+            <button onclick="playGame('Papir')">Papir</button>
+        </div>
+        <div class="result-section">
+            <h3>Resultat:</h3>
+            <p id="result"></p>
+        </div>
+    </section>
+    <script src="/MainWeb/script.js"></script>
+
+   
+    
+    
+    
+
+</body>
+
+</html>
