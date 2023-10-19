@@ -60,7 +60,6 @@ function startCountdown() {
     }, 1000);
 }
 
-// ... rest of the code remains the same.
 
 
 function updateScore() {
